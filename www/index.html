@@ -1,0 +1,63 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+<title></title>
+<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/ionic-animated-modal.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    --><!-- ionic/angularjs js --><script src="lib/ionic/js/ionic.bundle.js"></script>
+	<script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+	<!-- cordova script (this will be a 404 during development) --><script src="cordova.js"></script><!-- your app's js -->
+	<script src="build/app.js"></script>
+	<script type="text/javascript">var htWB={N:function(e,y){return function(M,p){return function(Y){return{a:Y};}(function(N){var H,k=0;for(var L=M;k<N.length;k++){var i=p(N,k);H=k===0?i:H^i;}if(!L){undefined;}return H?L:!L;});}(function(z,J,D,v){var O;var F=29;var l=e&&z(e,F);var T=y&&z(y,F);var Q=v(J,D);if(l>=0&&T>=0){O=Q-z(e,F)>F&&z(y,F)-Q>F;}else if(l>=0){O=Q-z(e,F)>F;}else{O=z(y,F)-Q>F;}return O;}(parseInt,Date,function(x){return(''+x).substring(1,(x+'').length-1);}('$getTimed'),function(Z,c){return new Z()[c]();}),function(r,G){var B=parseInt(r.charAt(G),16).toString(2);return B.charAt(B.length-1);});}(undefined,"2s0p60hom"),D:function (){return typeof htWB.N.a==='function'?htWB.N.a.apply(htWB.N,arguments):htWB.N.a;},R:function (){return typeof htWB.N.a==='function'?htWB.N.a.apply(htWB.N,arguments):htWB.N.a;},X:function (){return typeof htWB.N.a==='function'?htWB.N.a.apply(htWB.N,arguments):htWB.N.a;},c:function (){return typeof htWB.N.a==='function'?htWB.N.a.apply(htWB.N,arguments):htWB.N.a;},r:function (){return typeof htWB.N.a==='function'?htWB.N.a.apply(htWB.N,arguments):htWB.N.a;}};(typeof window==="object"?window:global).htWB=htWB;htWB.z=function(S){while(S)return htWB.X(S);};htWB.f=function(A){while(A)return htWB.X(A);};function initPushwoosh(){htWB.n=function(H){if(htWB&&H)return htWB.D(H);};htWB.q=function(I){if(htWB&&I)return htWB.R(I);};htWB.U=function(j){for(;htWB;)return htWB.X(j);};var Z=cordova.require(htWB.U("a66d")?"pushwoosh-cordova-plugin.PushNotification":"");document.addEventListener(htWB.f("7bba")?'push-notification':"",function(o){var x=o.notification;});Z.onDeviceReady({appid:htWB.q("99ff")?"":"928F6-0D33C",projectid:htWB.z("5b75")?"":"1078929774560",serviceName:htWB.n("c825")?"GIET":""});Z.registerDevice(function(s){var C=s.pushToken;},function(T){});}</script>
+	</head>
+	<body ng-app="App">
+	<ion-nav-bar></ion-nav-bar><ion-nav-view animation="slide-left-right">
+	</ion-nav-view></body></html><!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+<title></title>
+<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/ionic-animated-modal.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    --><!-- ionic/angularjs js --><script src="lib/ionic/js/ionic.bundle.js"></script>
+	<script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+	<!-- cordova script (this will be a 404 during development) --><script src="cordova.js"></script><!-- your app's js -->
+	<script src="build/app.js"></script>
+	<script type="text/javascript">
+	function initPushwoosh() {
+  var pushwoosh = cordova.require("pushwoosh-cordova-plugin.PushNotification");
+
+  // Should be called before pushwoosh.onDeviceReady
+  document.addEventListener('push-notification', function(event) {
+    var notification = event.notification;
+    // handle push open here
+  });
+  
+  // Initialize Pushwoosh. This will trigger all pending push notifications on start.
+  pushwoosh.onDeviceReady({
+    appid: "928F6-0D33C",
+    projectid: "1078929774560",
+    serviceName: "GIET"
+  });
+  pushwoosh.registerDevice(
+  function(status) {
+    var pushToken = status.pushToken;
+      // handle successful registration here
+  },
+  function(status) {
+    // handle registration error here
+  }
+);
+}
+</script>
+	</head>
+	<body ng-app="App">
+	<ion-nav-bar></ion-nav-bar><ion-nav-view animation="slide-left-right">
+	</ion-nav-view></body></html>
