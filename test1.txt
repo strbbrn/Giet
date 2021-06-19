@@ -1,20 +1,19 @@
-let n = 3;
-let m = 4;
+
 let count=0;
 var arr1 = Array.from({
-    length: n // Create 5 indexes with undefined values
+    length: n
   },
-  function(v, k) { // Run a map function on said indexes using v(alue)[undefined] and k(ey)[0 to 4]
-    return k+1; // Return k(ey) as value for this index
+  function(v, k) {
+    return k+1; 
   }
 );
 
 
 var arr2 = Array.from({
-    length: m // Create 5 indexes with undefined values
+    length: m 
   },
-  function(v, k) { // Run a map function on said indexes using v(alue)[undefined] and k(ey)[0 to 4]
-    return k+1; // Return k(ey) as value for this index
+  function(v, k) { 
+    return k+1; 
   }
 );
 
